@@ -1,0 +1,20 @@
+html.ng-scope {
+  background:#000;
+  color:#fff;
+}
+
+h1.ng-binding {
+  font-size: 120px;
+  padding: 0 0 0 30px;
+}
+.weatherForm{
+  /*text-align: center;*/
+}
+.weatherSummary{
+  background: #fafafa;
+}
+input#input_0{background:white;}
+
+.container {
+  margin:20px 0 20px 0;
+}

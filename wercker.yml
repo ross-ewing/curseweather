@@ -1,0 +1,9 @@
+box: debian 
+
+deploy:
+  steps:
+    - ross-ewing/s3-website:
+        key: $KEY
+        secret: $SECRET
+        bucket: $BUCKET
+        region: $REGION

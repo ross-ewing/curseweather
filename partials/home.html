@@ -1,0 +1,26 @@
+<div ng-controller="homeWeather">
+  <div class="container">
+    <div class="weatherForm">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h3>Get the fucking weather</h3>
+          <form ng-submit="submitForm(inputCity)">
+            <md-input-container>
+              <input type="text" minlength="4" required ng-model="inputCity" placeholder="Location">
+            </md-input-container>
+            <md-button class="md-raised md-primary" type="submit" value="Go">Go</md-button>
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="weatherSummary">
+    <h1 class="weatherDescript">{{swear}} {{weather.weather["0"].description}}</h1>
+    <div class="weatherInfo">
+      <h4 class="weatherLocation">{{weather.name}}</h4>
+      <h4 class="weatherDetails">{{temp}}</h4>
+    </div>
+  </div>
+</div>
