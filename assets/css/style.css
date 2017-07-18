@@ -3,18 +3,55 @@ html.ng-scope {
   color:#fff;
 }
 
+body {
+  background-color:#fafafa!important;
+}
+
 h1.ng-binding {
   font-size: 120px;
   padding: 0 0 0 30px;
+  color: #000;
+  margin: 20px 0px 0px 5vw;
 }
 .weatherForm{
   /*text-align: center;*/
 }
 .weatherSummary{
-  background: #fafafa;
+  z-index: 99;
+  display: block;
+  position: relative;
 }
 input#input_0{background:white;}
 
 .container {
   margin:20px 0 20px 0;
+}
+
+md-input-container.md-icon-float{
+  background:#fff;
+  display: inline-flex;
+}
+
+h3.centerTitle{
+  text-align: center;
+}
+
+form{
+  display: table;
+  margin:0 auto;
+}
+
+#googlemaps {
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+
+md-card._md.md-default-theme {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
 }
