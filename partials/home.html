@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <h3 class="centerTitle">Get the fucking weather</h3>
+          <h3 class="centerTitle">Where is your lazy butt?</h3>
           <form ng-submit="submitForm(inputCity)">
             <md-input-container>
               <input type="text" minlength="4" required ng-model="inputCity" placeholder="Location">
@@ -21,24 +21,27 @@
   </div>
 
   <div class="weatherSummary">
-    <h1 class="weatherDescript">{{swear}} {{weather.weather["0"].description}}</h1>
+    <div ng-repeat="words in weatherArray">
+      <h1 id="fuckingWeather">{{words}}</h1>
+    </div>
   </div>
+  <script>
+    $("#fuckingWeather").fitText(0.4);
+  </script>
 
-  <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+  <md-card class="mobilebox" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
     <md-card-title>
       <md-card-title-text>
         <span class="md-headline">The other shit</span>
         <span class="md-subhead">{{weather.name}}</span>
         <span class="md-subhead">{{temp}}</span>
       </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-lg card-media">
-        </div>
-      </md-card-title-media>
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">
-      <md-button>Action 1</md-button>
-      <md-button>Action 2</md-button>
+      <md-button>Next 5 days</md-button>
+      <md-button>% of rain today</md-button>
     </md-card-actions>
   </md-card>
+</div>
+</md-card>
 </div>

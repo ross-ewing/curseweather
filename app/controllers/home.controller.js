@@ -4,8 +4,14 @@ app.controller('homeWeather', function($scope) {
   $scope.submitForm = function(inputCity) {
     var weather = getWeather(inputCity);
     $scope.weather = weather;
+
     var swear = swears[Math.floor(Math.random() * swears.length)];
-    $scope.swear = swear;
+    $scope.swearWeather = swear + " " + weather.weather["0"].description;
+
+    var words = $scope.swearWeather,
+      wordArray = words.split(' ');
+    $scope.weatherArray = wordArray;
+
     var temp = weather.main.temp_max - 270.15;
     $scope.temp = "Temperature: " + temp + "°C";
     console.log(weather);
@@ -44,6 +50,7 @@ app.controller('homeWeather', function($scope) {
         scaleControl: false, // allow users to zoom the Google Map
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: latLng,
+        disableDefaultUI: true,
         styles: [{
             elementType: 'geometry',
             stylers: [{
