@@ -1,3 +1,29 @@
+.rainChart {
+  position: relative;
+  overflow: scroll;
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.rainChart h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.rainContain h1 {
+  position: relative;
+  text-align: center;
+}
+
+.rainContain {
+  display: none;
+}
+
+h1#fuckingWeather {
+  display: block;
+}
+
 html.ng-scope {
   background: #000;
   color: #fff;

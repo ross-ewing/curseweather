@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <h3 class="centerTitle">Where is your lazy butt?</h3>
+          <h3 class="centerTitle">Where are you?</h3>
           <form ng-submit="submitForm(inputCity)">
             <md-input-container>
               <input type="text" minlength="4" required ng-model="inputCity" placeholder="Location">
@@ -19,7 +19,12 @@
       </div>
     </div>
   </div>
-
+  <div class="rainContain">
+    <h1>Chance it pisses it down</h1>
+    <div class="rainChart">
+      <div class="rainSvg"></div>
+    </div>
+  </div>
   <div class="weatherSummary">
     <div ng-repeat="words in weatherArray">
       <h1 id="fuckingWeather">{{words}}</h1>
@@ -39,7 +44,7 @@
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">
       <md-button>Next 5 days</md-button>
-      <md-button>% of rain today</md-button>
+      <md-button ng-click="rainChartToggle()">% of rain</md-button>
     </md-card-actions>
   </md-card>
 </div>
